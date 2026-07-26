@@ -1,0 +1,61 @@
+name: TraceBack support request
+description: Report a problem or ask for help with the TraceBack iOS app.
+title: "[TraceBack] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contacting TraceBack support. Do not include private photos, precise locations, Apple IDs, receipts, or other personal information.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Photo access or scanning
+        - Map or route
+        - Collections
+        - Premium purchase or restore
+        - Apple Intelligence note
+        - Advertising or privacy
+        - Crash or performance
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: TraceBack version
+      placeholder: Example: 1.0 (3)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version
+      placeholder: Example: iPhone 17 Pro, iOS 26.5
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Explain what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See ...
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed private photos, precise locations, Apple IDs, receipts, and other personal information.
+          required: true
